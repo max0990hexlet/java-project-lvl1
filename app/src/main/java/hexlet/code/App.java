@@ -4,7 +4,7 @@
 package hexlet.code;
 
 public class App {
-    public String getGreeting() {
+    public static String getGreeting() {
         return "Hello World!";
     }
 
