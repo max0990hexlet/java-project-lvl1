@@ -26,7 +26,7 @@ public class App {
             Cli.welcome();
         }
         if (gameNumber.equals("2")) {
-            String userName =Cli.welcome();
+            String userName = Cli.welcome();
             String answer = Even.run();
             System.out.println(answer + userName);
         }

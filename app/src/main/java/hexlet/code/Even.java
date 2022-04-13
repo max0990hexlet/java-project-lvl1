@@ -8,8 +8,8 @@ public class Even {
     public static String run() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         int countRightAnswer = 0;
-
-        while (countRightAnswer < 3){
+        final int victoryCount = 3;
+        while (countRightAnswer < victoryCount) {
             int random = Cli.random();
             System.out.println("Question: " + random);
             System.out.print("Your answer: ");
@@ -24,8 +24,6 @@ public class Even {
                 return "Let's try again, ";
             }
         }
-
         return "Congratulations, ";
-        
     }
 }

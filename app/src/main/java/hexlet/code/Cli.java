@@ -7,8 +7,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Cli {
-    static Scanner s = new Scanner(System.in);
-    static Random RANDOM = new Random();
+    private static Scanner s = new Scanner(System.in);
+    private static Random rand = new Random();
 
     public static String welcome() {
         System.out.println("Welcome to the Brain Games!");
@@ -23,6 +23,6 @@ public class Cli {
     }
 
     public static int random() {
-        return RANDOM.nextInt();
+        return rand.nextInt();
     }
 }
