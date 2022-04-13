@@ -4,15 +4,25 @@
 package hexlet.code;
 
 import java.util.Scanner;
-public class Cli {
-    public static void run() {
-        System.out.println("Welcome to the Brain Games!");
-        try (
-            Scanner myObj = new Scanner(System.in)) {
-            System.out.print("May I have your name? ");
+import java.util.Random;
 
-            String userName = myObj.nextLine();  // Read user input
-            System.out.println("Hello, " + userName + "!");  // Output user input
-        }
+public class Cli {
+    static Scanner s = new Scanner(System.in);
+    static Random RANDOM = new Random();
+
+    public static String welcome() {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = nextLine();
+        System.out.println("Hello, " + userName + "!");
+        return userName;
+    }
+
+    public static String nextLine() {
+        return s.nextLine();
+    }
+
+    public static int random() {
+        return RANDOM.nextInt();
     }
 }

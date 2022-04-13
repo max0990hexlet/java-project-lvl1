@@ -8,7 +8,27 @@ public class App {
         return "Hello World!";
     }
 
+    public static String choiceGame() {
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("0 - Exit");
+        System.out.println("1 - Greet");
+        System.out.println("2 - Even");
+        String gameNumber = "0";
+        System.out.print("Your choice: ");
+        gameNumber = Cli.nextLine();
+        return gameNumber;
+    }
+
     public static void main(String[] args) {
-        Cli.run();
+        String gameNumber = choiceGame();
+
+        if (gameNumber.equals("1")) {
+            Cli.welcome();
+        }
+        if (gameNumber.equals("2")) {
+            String userName =Cli.welcome();
+            String answer = Even.run();
+            System.out.println(answer + userName);
+        }
     }
 }
