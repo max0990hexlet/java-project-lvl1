@@ -25,4 +25,12 @@ public class Cli {
     public static int random() {
         return rand.nextInt();
     }
+
+    public static int random(final int min, final int max) {
+        return min + rand.nextInt(max - min + 1);
+    }
+
+    public static int random(final int bound) {
+        return rand.nextInt(bound);
+    }
 }

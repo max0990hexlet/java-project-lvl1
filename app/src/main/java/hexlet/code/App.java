@@ -13,6 +13,7 @@ public class App {
         System.out.println("0 - Exit");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         String gameNumber = "0";
         System.out.print("Your choice: ");
         gameNumber = Cli.nextLine();
@@ -28,6 +29,11 @@ public class App {
         if (gameNumber.equals("2")) {
             String userName = Cli.welcome();
             String answer = Even.run();
+            System.out.println(answer + userName);
+        }
+        if (gameNumber.equals("3")) {
+            String userName = Cli.welcome();
+            String answer = Calc.run();
             System.out.println(answer + userName);
         }
     }
