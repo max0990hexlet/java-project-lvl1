@@ -3,6 +3,9 @@
  */
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 public class App {
     public static String getGreeting() {
         return "Hello World!";
@@ -12,8 +15,8 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("0 - Exit");
         System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
+        System.out.println("2 - " + Even.getName());
+        System.out.println("3 - " + Calc.getName());
         String gameNumber = "0";
         System.out.print("Your choice: ");
         gameNumber = Cli.nextLine();
@@ -23,18 +26,18 @@ public class App {
     public static void main(String[] args) {
         String gameNumber = choiceGame();
 
-        if (gameNumber.equals("1")) {
-            Cli.welcome();
-        }
-        if (gameNumber.equals("2")) {
-            String userName = Cli.welcome();
-            String answer = Even.run();
-            System.out.println(answer + userName);
-        }
-        if (gameNumber.equals("3")) {
-            String userName = Cli.welcome();
-            String answer = Calc.run();
-            System.out.println(answer + userName);
+        switch (gameNumber) {
+            case "1" :
+                Cli.welcome();
+                break;
+            case "2" :
+                Engine.run(new Even());
+                break;
+            case "3" :
+                Engine.run(new Calc());
+                break;
+            default :
+                throw new IllegalArgumentException("Unknown game number");
         }
     }
 }
