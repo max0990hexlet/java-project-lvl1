@@ -5,6 +5,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 public class App {
     public static String getGreeting() {
@@ -17,6 +18,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - " + Even.getName());
         System.out.println("3 - " + Calc.getName());
+        System.out.println("4 - " + GCD.getName());
         String gameNumber = "0";
         System.out.print("Your choice: ");
         gameNumber = Cli.nextLine();
@@ -35,6 +37,9 @@ public class App {
                 break;
             case "3" :
                 Engine.run(new Calc());
+                break;
+            case "4" :
+                Engine.run(new GCD());
                 break;
             default :
                 throw new IllegalArgumentException("Unknown game number");
