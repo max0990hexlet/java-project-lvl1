@@ -1,5 +1,5 @@
 # Makefile
-run:
+run-dist:
 	./app/build/install/app/bin/app
 check-style:
 	./gradlew checkstyleMain
