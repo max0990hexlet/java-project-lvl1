@@ -33,4 +33,8 @@ public class Cli {
     public static int random(final int bound) {
         return rand.nextInt(bound);
     }
+
+    public static boolean bool() {
+        return rand.nextBoolean();
+    }
 }
